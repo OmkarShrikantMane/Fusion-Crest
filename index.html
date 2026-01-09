@@ -2,451 +2,993 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Fusion Crest | Premium Custom T-Shirts</title>
-<meta name="description" content="Premium custom t-shirts, graphic tees and print-on-demand apparel. Order via WhatsApp with fast delivery in Sholapur area.">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<title>Fusion Crest Revrie Prints | Premium Apparel</title>
+<meta name="description" content="Trending printed t-shirts, hoodies & long sleeve apparel. Premium fabric, bold prints. Order via WhatsApp.">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+
 <style>
-:root{
-  --primary:#ff9800;
-  --primary-dark:#e68900;
-  --dark:#0e0e0e;
-  --card:#1a1a1a;
-  --card-hover:#252525;
-  --text:#ffffff;
-  --text-muted:#bdbdbd;
-  --accent:#25d366;
-  --shadow:0 20px 40px rgba(0,0,0,0.3);
-  --shadow-hover:0 30px 60px rgba(255,152,0,0.2);
+:root {
+  --primary: #ff9800;
+  --primary-dark: #e68900;
+  --dark: #0a0a0a;
+  --glass: rgba(255, 255, 255, 0.08);
+  --glass-border: rgba(255, 255, 255, 0.12);
+  --text: #ffffff;
+  --muted: #b0b0b0;
+  --shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
+  --spacing-xs: clamp(0.4rem, 1vw, 0.5rem);
+  --spacing-sm: clamp(0.8rem, 2vw, 1rem);
+  --spacing-md: clamp(1.2rem, 3vw, 1.5rem);
+  --spacing-lg: clamp(1.6rem, 4vw, 2rem);
+  --spacing-xl: clamp(2.4rem, 5vw, 3rem);
+  --spacing-2xl: clamp(3.2rem, 6vw, 4rem);
 }
 
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Poppins',sans-serif;}
-body{background:var(--dark);color:var(--text);line-height:1.6;overflow-x:hidden;}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+}
+
+body {
+  background: var(--dark);
+  color: var(--text);
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  line-height: 1.6;
+  min-height: 100vh;
+}
 
 /* HEADER */
-header{
-  position:fixed;top:0;left:0;width:100%;
-  padding:1rem 6%;backdrop-filter:blur(20px);
-  display:flex;justify-content:space-between;align-items:center;
-  background:rgba(14,14,14,0.95);z-index:1000;
-  transition:all 0.3s ease;border-bottom:1px solid rgba(255,255,255,0.1);
-}
-.logo{font-weight:700;font-size:1.8rem;background:linear-gradient(135deg,var(--primary),#ffb347); 
-     -webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-nav{display:flex;gap:2rem;}
-nav a{color:var(--text);text-decoration:none;font-weight:500;font-size:0.95rem;
-       position:relative;transition:all 0.3s ease;}
-nav a::after{content:'';position:absolute;bottom:-4px;left:0;width:0;height:2px;
-             background:var(--primary);transition:all 0.3s ease;}
-nav a:hover::after{width:100%;}
-.menu{display:none;flex-direction:column;justify-content:center;align-items:center;
-      width:30px;height:30px;cursor:pointer;position:relative;}
-.menu span{display:block;width:25px;height:3px;background:var(--text);margin:3px 0;
-           transition:all 0.3s cubic-bezier(0.68,-0.55,0.265,1.55);border-radius:3px;
-           position:relative;}
-.menu.active span:nth-child(1){transform:rotate(45deg) translate(8px,8px);}
-.menu.active span:nth-child(2){opacity:0;transform:translateX(15px);}
-.menu.active span:nth-child(3){transform:rotate(-45deg) translate(7px,-7px);}
-
-/* WHATSAPP LOGO - PROPERLY DESIGNED */
-.whatsapp-logo{
-  position:fixed;right:2rem;bottom:2rem;width:70px;height:70px;
-  background:var(--accent);border-radius:50%;display:flex;
-  align-items:center;justify-content:center;box-shadow:var(--shadow);
-  transition:all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-  z-index:1000;text-decoration:none;overflow:hidden;
-  box-shadow:0 10px 30px rgba(37,211,102,0.4);
-}
-.whatsapp-logo::before{
-  content:'';position:absolute;top:12px;left:12px;width:46px;height:46px;
-  border-radius:50%;background:#128C7E;box-shadow:inset 0 2px 4px rgba(0,0,0,0.2);
-}
-.whatsapp-logo::after{
-  content:'📱';font-size:28px;position:absolute;z-index:2;
-}
-.whatsapp-logo:hover{
-  transform:scale(1.15) translateY(-8px) rotate(10deg);
-  box-shadow:0 20px 50px rgba(37,211,102,0.6);
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: clamp(60px, 8vw, 80px);
+  padding: 0 clamp(1rem, 4vw, 3rem);
+  backdrop-filter: blur(20px);
+  background: rgba(10, 10, 10, 0.95);
+  border-bottom: 1px solid var(--glass-border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  z-index: 1000;
+  transition: all 0.3s ease;
 }
 
-/* MOBILE MENU - SMOOTH ENHANCED */
-.mobile-nav{
-  position:fixed;top:0;right:-100%;width:80%;max-width:320px;height:100vh;
-  background:linear-gradient(135deg,#121212 0%,#1a1a1a 50%,#0f0f0f 100%);
-  padding:5rem 2rem 2rem 2rem;transition:all 0.5s cubic-bezier(0.25,0.46,0.45,0.94);
-  z-index:999;box-shadow:-20px 0 60px rgba(0,0,0,0.8);
-  transform:translateX(20px);opacity:0;
+.logo {
+  font-size: clamp(1.4rem, 4vw, 1.8rem);
+  font-weight: 700;
+  background: linear-gradient(135deg, var(--primary), #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
-.mobile-nav.open{right:0;transform:translateX(0);opacity:1;}
-.mobile-nav::before{
-  content:'';position:absolute;top:0;left:0;width:100%;height:100%;
-  background:linear-gradient(135deg,rgba(255,152,0,0.1),transparent);
-  opacity:0;transition:opacity 0.3s ease;pointer-events:none;
-}
-.mobile-nav.open::before{opacity:1;}
-.mobile-nav ul{list-style:none;padding:0;margin:0;}
-.mobile-nav a{
-  display:flex;align-items:center;color:var(--text);text-decoration:none;font-size:1.3rem;
-  font-weight:500;padding:1.2rem 0;transition:all 0.4s cubic-bezier(0.4,0,0.2,1);
-  border-bottom:1px solid rgba(255,255,255,0.05);position:relative;overflow:hidden;
-}
-.mobile-nav a::before{
-  content:'';position:absolute;left:0;top:0;width:0;height:100%;background:var(--primary);
-  transition:width 0.4s cubic-bezier(0.4,0,0.2,1);z-index:-1;
-}
-.mobile-nav a:hover::before{width:100%;}
-.mobile-nav a:hover{color:#000 !important;transform:translateX(15px);}
-.mobile-nav a i{margin-right:1rem;font-size:1.4rem;}
 
-/* HERO */
-.hero{
-  min-height:100vh;background:linear-gradient(rgba(0,0,0,0.7),rgba(0,0,0,0.9)),
-  url("https://images.unsplash.com/photo-1523381210434-271e8be1f52b?q=80&w=1600") center/cover no-repeat;
-  display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;
-  padding:0 5%;position:relative;overflow:hidden;
+nav {
+  display: flex;
+  gap: var(--spacing-md);
+  flex-wrap: wrap;
 }
-.hero::before{content:'';position:absolute;top:0;left:0;right:0;bottom:0;
-              background:linear-gradient(45deg,transparent 30%,rgba(255,152,0,0.1) 50%,transparent 70%);
-              animation:shine 6s infinite;}
-@keyframes shine{0%,100%{transform:translateX(-100%) skewX(-25deg);}
-                50%{transform:translateX(300%) skewX(-25deg);}}
-.hero-content{max-width:800px;animation:floatIn 1.5s ease-out;}
-@keyframes floatIn{0%{opacity:0;transform:translateY(50px);}
-                  100%{opacity:1;transform:translateY(0);}}
-.hero h1{font-size:clamp(2.5rem,8vw,5rem);font-weight:700;margin-bottom:1rem;
-         background:linear-gradient(135deg,var(--text),var(--text-muted)); 
-         -webkit-background-clip:text;-webkit-text-fill-color:transparent;}
-.hero .highlight{color:var(--primary);font-weight:700;display:block;}
-.hero p{font-size:clamp(1rem,3vw,1.3rem);color:var(--text-muted);margin:1.5rem 0 2.5rem;
-        max-width:600px;}
-.btn{display:inline-block;padding:1rem 2.5rem;background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-     color:#000;font-weight:600;border-radius:50px;font-size:1.1rem;text-decoration:none;
-     box-shadow:var(--shadow);transition:all 0.3s ease;position:relative;overflow:hidden;}
-.btn::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;
-             background:linear-gradient(90deg,transparent,hsla(0,0%,100%,0.3),transparent);
-             transition:0.5s;}
-.btn:hover{transform:translateY(-3px) scale(1.05);box-shadow:var(--shadow-hover);
-           text-decoration:none;color:#000;}
-.btn:hover::before{left:100%}
+
+nav a {
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  padding: var(--spacing-xs) var(--spacing-sm);
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+nav a:hover {
+  color: var(--primary);
+}
+
+nav a::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+/* ENHANCED HERO SECTION */
+.hero {
+  min-height: 100vh;
+  height: 100svh;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 0 clamp(1.5rem, 5vw, 6rem);
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    linear-gradient(135deg, rgba(0,0,0,0.85), rgba(0,0,0,0.9)),
+    url("https://images.unsplash.com/photo-1512436991641-6745cdb1723f?q=80&w=1600") center/cover no-repeat;
+  z-index: -2;
+}
+
+.hero::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: 
+    radial-gradient(circle at 20% 20%, rgba(255,152,0,0.15) 0%, transparent 50%),
+    radial-gradient(circle at 80% 80%, rgba(255,152,0,0.1) 0%, transparent 50%),
+    linear-gradient(45deg, transparent 30%, rgba(255,152,0,0.03) 50%, transparent 70%);
+  animation: heroShimmer 6s ease-in-out infinite;
+  z-index: -1;
+}
+
+@keyframes heroShimmer {
+  0%, 100% { opacity: 0.6; transform: translateX(-100%) skewX(-15deg); }
+  50% { opacity: 1; transform: translateX(100%) skewX(-15deg); }
+}
+
+.hero-content {
+  max-width: 90vw;
+  padding: clamp(2rem, 10vh, 4rem) 0;
+  position: relative;
+  animation: fadeInUp 1s ease-out;
+}
+
+.hero-badge {
+  display: inline-block;
+  background: linear-gradient(135deg, var(--primary), #ffb347);
+  color: #000;
+  padding: 0.5rem 1.5rem;
+  border-radius: 50px;
+  font-size: clamp(0.8rem, 2vw, 0.95rem);
+  font-weight: 700;
+  margin-bottom: var(--spacing-md);
+  box-shadow: 0 4px 20px rgba(255,152,0,0.4);
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.hero-content h1 {
+  font-size: clamp(2.8rem, 9vw, 7rem);
+  font-weight: 900;
+  margin-bottom: var(--spacing-lg);
+  line-height: 1.05;
+  position: relative;
+  letter-spacing: -0.02em;
+}
+
+.hero-content h1 span {
+  background: linear-gradient(135deg, var(--primary), #ffb347, var(--primary));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  animation: gradientShift 3s ease-in-out infinite;
+}
+
+@keyframes gradientShift {
+  0%, 100% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+}
+
+.hero-content p {
+  max-width: 700px;
+  margin: 0 auto var(--spacing-xl);
+  color: var(--muted);
+  font-size: clamp(1.15rem, 3vw, 1.4rem);
+  font-weight: 300;
+}
+
+.cta-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  padding: clamp(1.1rem, 3vw, 1.3rem) clamp(2.5rem, 6vw, 3.5rem);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #000;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 800;
+  font-size: clamp(1.05rem, 2.8vw, 1.2rem);
+  box-shadow: 0 15px 35px rgba(255, 152, 0, 0.5);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  transition: left 0.6s;
+}
+
+.cta-btn:hover::before {
+  left: 100%;
+}
+
+.cta-btn:hover {
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 25px 50px rgba(255, 152, 0, 0.7);
+}
 
 /* SECTIONS */
-section{padding:5rem 6%;}
-.section-title{text-align:center;margin-bottom:4rem;}
-.section-title h2{font-size:clamp(2rem,5vw,3.5rem);margin-bottom:1rem;}
-.section-title p{color:var(--text-muted);font-size:1.2rem;max-width:600px;margin:auto;}
-
-/* PRODUCT GRID */
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:2rem;}
-.product{background:var(--card);border-radius:24px;overflow:hidden;transition:all 0.4s cubic-bezier(0.175,0.885,0.32,1.275);
-         box-shadow:var(--shadow);}
-.product:hover{transform:translateY(-15px) rotateX(5deg);box-shadow:var(--shadow-hover);}
-.product img{width:100%;height:300px;object-fit:cover;transition:transform 0.4s ease;}
-.product:hover img{transform:scale(1.1);}
-.product-body{padding:2rem;text-align:center;}
-.product h4{font-size:1.4rem;font-weight:600;margin-bottom:0.5rem;}
-.price{font-size:2rem;color:var(--primary);font-weight:700;margin:1rem 0;}
-.product .btn{display:block;margin-top:1rem;}
-
-/* FEATURES */
-.features{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:2rem;}
-.feature{background:var(--card);padding:3rem 2rem;border-radius:24px;text-align:center;
-         transition:all 0.3s ease;box-shadow:var(--shadow);}
-.feature:hover{transform:translateY(-10px);background:linear-gradient(135deg,var(--card),var(--card-hover));}
-.feature div{font-size:3rem;margin-bottom:1rem;display:block;}
-.feature h4{font-size:1.3rem;font-weight:600;margin-bottom:1rem;}
-.feature p{color:var(--text-muted);}
-
-/* ORDER SECTION */
-.order-section{background:linear-gradient(135deg,#1a1a1a,#252525);padding:5rem 6%;border-radius:24px;
-               margin:3rem 6%;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
-.order-img img{width:100%;border-radius:24px;box-shadow:var(--shadow);}
-.order-form h2{font-size:2.5rem;margin-bottom:2rem;}
-.order-form input,.order-form select,.order-form textarea{
-  width:100%;padding:1rem;margin-bottom:1.5rem;border-radius:16px;border:2px solid transparent;
-  background:var(--card);color:var(--text);font-family:inherit;font-size:1rem;
-  transition:all 0.3s ease;}
-.order-form input:focus,.order-form select:focus,.order-form textarea:focus{
-  outline:none;border-color:var(--primary);box-shadow:0 0 0 3px rgba(255,152,0,0.1);}
-.order-form textarea{height:120px;resize:vertical;}
-.order-form button{width:100%;padding:1.2rem;background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-                   border:none;color:#000;font-weight:600;font-size:1.1rem;border-radius:50px;
-                   cursor:pointer;transition:all 0.3s ease;box-shadow:var(--shadow);}
-.order-form button:hover{transform:translateY(-2px);box-shadow:var(--shadow-hover);}
-
-/* SOCIAL ICON - FOOTER */
-.social-links{display:flex;justify-content:center;gap:1rem;margin-top:1rem;}
-.social-link{
-  width:55px;height:55px;background:var(--card);border-radius:50%;display:flex;
-  align-items:center;justify-content:center;transition:all 0.3s ease;
-  text-decoration:none;color:var(--text);font-size:1.4rem;
+section {
+  padding: var(--spacing-2xl) clamp(1.5rem, 5vw, 6rem);
+  max-width: 1400px;
+  margin: 0 auto;
 }
-.social-link:hover{background:var(--primary);transform:translateY(-5px) rotate(360deg);}
 
-/* FOOTER */
-footer{background:linear-gradient(135deg,#070707,#0f0f0f);padding:4rem 6% 2rem;
-       text-align:center;border-top:1px solid rgba(255,255,255,0.1);}
-.footer-content{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:3rem;
-                margin-bottom:2rem;text-align:left;}
-.footer-section h4{font-size:1.3rem;margin-bottom:1rem;color:var(--primary);}
-.footer-section p,.footer-section a{color:var(--text-muted);text-decoration:none;}
-.footer-section a:hover{color:var(--primary);}
-.footer-bottom{padding-top:2rem;border-top:1px solid rgba(255,255,255,0.1);color:var(--text-muted);}
+.section-title {
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
 
-/* ANIMATIONS */
-@keyframes fadeInUp{from{opacity:0;transform:translateY(30px);}to{opacity:1;transform:translateY(0);}}
-section>*{animation:fadeInUp 0.8s ease-out forwards;}
+.section-title h2 {
+  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--text), var(--muted));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* COMPACT BEST SELLERS */
+.best-sellers {
+  background: linear-gradient(135deg, rgba(255,152,0,0.08), rgba(255,152,0,0.04));
+  padding: clamp(2rem, 5vw, var(--spacing-xl));
+  border-radius: 24px;
+  margin: var(--spacing-lg) auto;
+  max-width: 1000px;
+  box-shadow: 0 20px 60px rgba(255,152,0,0.1);
+}
+
+.bestseller-badge {
+  position: absolute;
+  top: clamp(0.8rem, 2vw, 1rem);
+  left: clamp(0.8rem, 2vw, 1rem);
+  background: linear-gradient(135deg, var(--primary), #ffb347);
+  color: #000;
+  padding: clamp(0.4rem, 1vw, 0.5rem) clamp(0.8rem, 2vw, 1rem);
+  border-radius: 20px;
+  font-size: clamp(0.75rem, 1.8vw, 0.85rem);
+  font-weight: 800;
+  box-shadow: 0 6px 20px rgba(255,152,0,0.4);
+  z-index: 2;
+}
+
+.best-sellers-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(260px, 45vw, 300px), 1fr));
+  gap: var(--spacing-md);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+@media (min-width: 768px) {
+  .best-sellers-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* PRODUCTS & OTHER SECTIONS - SAME AS BEFORE */
+.products-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(280px, 28vw, 320px), 1fr));
+  gap: var(--spacing-lg);
+}
+
+.product-card {
+  background: rgba(20, 20, 20, 0.8);
+  backdrop-filter: blur(15px);
+  border: 1px solid var(--glass-border);
+  border-radius: 24px;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.product-card:hover {
+  transform: translateY(-15px);
+  box-shadow: var(--shadow);
+}
+
+.product-image {
+  width: 100%;
+  height: clamp(200px, 35vw, 280px);
+  object-fit: cover;
+}
+
+.product-info {
+  padding: var(--spacing-lg);
+  text-align: center;
+}
+
+.product-info h3 {
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  margin-bottom: var(--spacing-sm);
+  font-weight: 600;
+}
+
+.product-price {
+  font-size: clamp(1.6rem, 5vw, 2rem);
+  font-weight: 800;
+  background: linear-gradient(135deg, var(--primary), #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+}
+
+.product-btn {
+  display: inline-block;
+  padding: clamp(0.7rem, 2vw, 0.8rem) clamp(1.5rem, 4vw, 2rem);
+  background: rgba(255, 152, 0, 0.2);
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.product-btn:hover {
+  background: var(--primary);
+  color: #000;
+}
+
+/* STEPS */
+.steps-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(clamp(200px, 22vw, 220px), 1fr));
+  gap: var(--spacing-lg);
+}
+
+.step-card {
+  background: rgba(20, 20, 20, 0.6);
+  backdrop-filter: blur(10px);
+  border: 1px solid var(--glass-border);
+  padding: var(--spacing-lg);
+  border-radius: 20px;
+  text-align: center;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.step-card::before {
+  content: attr(data-step);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: clamp(32px, 5vw, 40px);
+  height: clamp(32px, 5vw, 40px);
+  background: var(--primary);
+  color: #000;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+}
+
+.step-card h3 {
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  margin-bottom: var(--spacing-sm);
+}
+
+.step-card p {
+  color: var(--muted);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.step-card:hover {
+  transform: translateY(-8px);
+}
+
+/* ORDER FORM */
+#order {
+  background: radial-gradient(ellipse at center, rgba(255,152,0,0.05) 0%, transparent 70%);
+}
+
+.order-container {
+  background: rgba(20, 20, 20, 0.9);
+  backdrop-filter: blur(20px);
+  border: 1px solid var(--glass-border);
+  padding: clamp(2rem, 6vw, var(--spacing-xl));
+  border-radius: 28px;
+  max-width: min(500px, 90vw);
+  margin: 0 auto;
+}
+
+.form-group {
+  margin-bottom: var(--spacing-lg);
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: var(--spacing-xs);
+  font-weight: 500;
+  color: var(--muted);
+  font-size: clamp(0.9rem, 2vw, 1rem);
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: var(--spacing-md);
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  color: var(--text);
+  font-family: inherit;
+  font-size: clamp(0.95rem, 2.2vw, 1rem);
+  transition: all 0.3s ease;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.1);
+}
+
+.order-btn {
+  width: 100%;
+  padding: clamp(1.1rem, 3vw, 1.2rem);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: #000;
+  border: none;
+  border-radius: 50px;
+  font-size: clamp(1rem, 2.5vw, 1.1rem);
+  font-weight: 700;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.order-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 15px 35px rgba(255, 152, 0, 0.4);
+}
+
+/* FAQ */
+.faq-section {
+  background: rgba(20, 20, 20, 0.5);
+  padding: var(--spacing-xl);
+  border-radius: 32px;
+  margin: var(--spacing-lg) auto;
+  max-width: 800px;
+}
+
+.faq-item {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--glass-border);
+  border-radius: 16px;
+  margin-bottom: var(--spacing-md);
+  overflow: hidden;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  border-color: var(--primary);
+  box-shadow: 0 10px 30px rgba(255, 152, 0, 0.1);
+}
+
+.faq-question {
+  width: 100%;
+  padding: var(--spacing-lg);
+  background: transparent;
+  border: none;
+  color: var(--text);
+  font-size: clamp(1rem, 2.2vw, 1.1rem);
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: color 0.3s ease;
+}
+
+.faq-question:hover {
+  color: var(--primary);
+}
+
+.faq-question::after {
+  content: '+';
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  font-weight: 300;
+  transition: transform 0.3s ease;
+}
+
+.faq-question.active::after {
+  transform: rotate(45deg);
+}
+
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.02);
+  padding: 0 var(--spacing-lg);
+  transition: all 0.4s ease;
+}
+
+.faq-answer.active {
+  max-height: 300px;
+  padding: var(--spacing-md) var(--spacing-lg);
+}
+
+.faq-answer p {
+  color: var(--muted);
+  line-height: 1.7;
+  font-size: clamp(0.9rem, 2vw, 0.95rem);
+}
+
+/* ATTRACTIVE FOOTER */
+.site-footer {
+  background: linear-gradient(135deg, rgba(8,8,8,0.95), rgba(20,20,20,0.9));
+  backdrop-filter: blur(20px);
+  border-top: 1px solid var(--glass-border);
+  padding: clamp(3rem, 8vw, var(--spacing-2xl)) clamp(1.5rem, 5vw, 6rem);
+  position: relative;
+  overflow: hidden;
+}
+
+.site-footer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--primary), transparent);
+  animation: footerGlow 3s ease-in-out infinite;
+}
+
+@keyframes footerGlow {
+  0%, 100% { opacity: 0.5; transform: translateX(-100%); }
+  50% { opacity: 1; transform: translateX(100%); }
+}
+
+.footer-content {
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+  margin-bottom: var(--spacing-xl);
+  position: relative;
+  z-index: 1;
+}
+
+.footer-brand {
+  text-align: center;
+}
+
+.footer-brand h3 {
+  font-size: clamp(1.6rem, 5vw, 2.2rem);
+  background: linear-gradient(135deg, var(--primary), #ffb347, var(--primary));
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  margin-bottom: var(--spacing-md);
+  animation: gradientShift 4s ease-in-out infinite;
+}
+
+.footer-brand p {
+  color: var(--muted);
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
+  margin-bottom: var(--spacing-lg);
+}
+
+.social-links {
+  display: flex;
+  gap: var(--spacing-md);
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.social-link {
+  width: clamp(44px, 12px, 56px);
+  height: clamp(44px, 12px, 56px);
+  background: rgba(255, 152, 0, 0.2);
+  border: 1px solid var(--glass-border);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--primary);
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
+  transition: all 0.3s ease;
+}
+
+.social-link:hover {
+  background: var(--primary);
+  color: #000;
+  transform: translateY(-3px) scale(1.1);
+  box-shadow: 0 10px 25px rgba(255,152,0,0.4);
+}
+
+.footer-contact {
+  text-align: center;
+  padding: var(--spacing-lg);
+  background: rgba(255,152,0,0.05);
+  border-radius: 20px;
+  border: 1px solid var(--glass-border);
+}
+
+.footer-contact h4 {
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  margin-bottom: var(--spacing-md);
+  color: var(--primary);
+}
+
+.footer-contact p {
+  margin-bottom: var(--spacing-sm);
+  font-size: clamp(1rem, 2.2vw, 1.15rem);
+}
+
+.contact-highlight {
+  background: linear-gradient(135deg, var(--primary), #ffb347);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 700;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+}
+
+.footer-bottom {
+  text-align: center;
+  padding-top: var(--spacing-lg);
+  border-top: 1px solid var(--glass-border);
+  color: var(--muted);
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+}
 
 /* RESPONSIVE */
-@media(max-width:1024px){.order-section{grid-template-columns:1fr;margin:2rem 3%;}}
-@media(max-width:768px){
-  .menu{display:flex;}
-  nav{display:none;}
-  .hero h1{font-size:2.5rem;}
-  .order-section{grid-template-columns:1fr;padding:3rem 2rem;margin:2rem 3rem;gap:2rem;}
-  header{padding:1rem;}
-  section{padding:3rem 5%;}
-  .grid{grid-template-columns:1fr;gap:1.5rem;}
-  .whatsapp-logo{right:1rem;bottom:1rem;width:60px;height:60px;}
-  .whatsapp-logo::before{top:10px;left:10px;width:40px;height:40px;}
-  .whatsapp-logo::after{font-size:24px;}
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: clamp(2.4rem, 10vw, 4rem);
+  }
+  
+  .steps-grid {
+    grid-template-columns: repeat(auto-fit, minmax(45vw, 1fr));
+  }
 }
-@media(max-width:480px){
-  header{padding:1rem 4%;}
-  section{padding:2rem 4%;}
-  .order-section{margin:1.5rem 1rem;padding:2rem;}
-  .whatsapp-logo{right:1rem;bottom:1rem;width:55px;height:55px;}
+
+@media (max-width: 480px) {
+  .steps-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .best-sellers-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-height: 600px) {
+  .hero {
+    min-height: 100vh;
+    padding: clamp(1rem, 4vw, 2rem) 0;
+  }
+}
+
+/* Landscape Mobile */
+@media (max-height: 500px) and (orientation: landscape) {
+  .hero-content h1 {
+    font-size: clamp(2rem, 7vw, 3rem);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.product-card, .step-card {
+  animation: fadeInUp 0.6s ease forwards;
 }
 </style>
 </head>
+
 <body>
+
+<!-- HEADER -->
 <header>
   <div class="logo">Fusion Crest</div>
   <nav>
     <a href="#products">Products</a>
-    <a href="#features">Why Us</a>
+    <a href="#bestsellers">Best Sellers</a>
+    <a href="#steps">How to Order</a>
     <a href="#order">Order Now</a>
-    <a href="#contact">Contact</a>
+    <a href="#faq">FAQ</a>
   </nav>
-  <div class="menu" id="menuToggle">
-    <span></span><span></span><span></span>
-  </div>
 </header>
 
-<nav class="mobile-nav" id="mobileNav">
-  <ul>
-    <li><a href="#products" onclick="closeMobileMenu()"><i>👕</i>Products</a></li>
-    <li><a href="#features" onclick="closeMobileMenu()"><i>⭐</i>Why Us</a></li>
-    <li><a href="#order" onclick="closeMobileMenu()"><i>🛒</i>Order Now</a></li>
-    <li><a href="#contact" onclick="closeMobileMenu()"><i>📞</i>Contact</a></li>
-  </ul>
-</nav>
-
+<!-- ENHANCED HERO -->
 <section class="hero">
   <div class="hero-content">
-    <h1>Premium <span class="highlight">Custom T-Shirts</span></h1>
-    <p>High-quality prints on premium cotton. No minimum orders. Fast delivery in Sholapur & surrounding areas.</p>
-    <a href="#order" class="btn" onclick="closeMobileMenu()">Order via WhatsApp</a>
+    <div class="hero-badge">🔥 TRENDING NOW</div>
+    <h1>Premium <span>Printed Apparel</span></h1>
+    <p>Anime • Series • Graphic Prints<br>Premium fabric with bold long-lasting prints</p>
+    <a href="#order" class="cta-btn">₹400 Only – Order Now 🚀</a>
   </div>
 </section>
 
+<!-- COMPACT BEST SELLERS -->
+<section id="bestsellers" class="best-sellers">
+  <div class="section-title">
+    <h2>🔥 Best Sellers</h2>
+  </div>
+  <div class="best-sellers-grid">
+    <div class="product-card" style="position: relative;">
+      <div class="bestseller-badge">#1 BESTSELLER</div>
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Top Printed T-Shirt" class="product-image">
+      <div class="product-info">
+        <h3>Anime Legend Tee</h3>
+        <div class="product-price">₹400</div>
+        <a href="#order" class="product-btn">Buy Now</a>
+      </div>
+    </div>
+    <div class="product-card" style="position: relative;">
+      <div class="bestseller-badge">⭐ TOP RATED</div>
+      <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990" alt="Premium Hoodie" class="product-image">
+      <div class="product-info">
+        <h3>Graphic Hoodie</h3>
+        <div class="product-price">₹400</div>
+        <a href="#order" class="product-btn">Buy Now</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PRODUCTS -->
 <section id="products">
   <div class="section-title">
-    <h2>Featured Products</h2>
-    <p>Latest designs with HD prints that last wash after wash</p>
+    <h2>Our Products</h2>
   </div>
-  <div class="grid">
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?q=80&w=800" alt="Anime T-Shirt">
-      <div class="product-body">
-        <h4>Anime Warrior Tee</h4>
-        <p class="price">₹450</p>
-        <a href="#order" class="btn" onclick="closeMobileMenu()">Quick Order</a>
+  <div class="products-grid">
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Printed T-Shirt" class="product-image">
+      <div class="product-info">
+        <h3>Printed T-Shirt</h3>
+        <div class="product-price">₹400</div>
+        <a href="#order" class="product-btn">Buy Now</a>
       </div>
     </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1576566588028-4147f3842f27?q=80&w=800" alt="Graphic Tee">
-      <div class="product-body">
-        <h4>Urban Graphic Tee</h4>
-        <p class="price">₹400</p>
-        <a href="#order" class="btn" onclick="closeMobileMenu()">Quick Order</a>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1618354691373-d851c5c3a990" alt="Premium Hoodie" class="product-image">
+      <div class="product-info">
+        <h3>Premium Hoodie</h3>
+        <div class="product-price">₹400</div>
+        <a href="#order" class="product-btn">Buy Now</a>
       </div>
     </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1598032895397-b9472444bf93?q=80&w=800" alt="Streetwear Tee">
-      <div class="product-body">
-        <h4>Streetwear Essential</h4>
-        <p class="price">₹480</p>
-        <a href="#order" class="btn" onclick="closeMobileMenu()">Quick Order</a>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1612423284934-2850a4ea6b0f" alt="Long Sleeve Tee" class="product-image">
+      <div class="product-info">
+        <h3>Long Sleeve Tee</h3>
+        <div class="product-price">₹400</div>
+        <a href="#order" class="product-btn">Buy Now</a>
       </div>
     </div>
-    <div class="product">
-      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?q=80&w=800" alt="Minimal Tee">
-      <div class="product-body">
-        <h4>Minimal Clean Tee</h4>
-        <p class="price">₹420</p>
-        <a href="#order" class="btn" onclick="closeMobileMenu()">Quick Order</a>
+    <div class="product-card">
+      <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab" alt="Graphic Tee" class="product-image">
+      <div class="product-info">
+        <h3>Graphic Tee</h3>
+        <div class="product-price">₹400</div>
+        <a href="#order" class="product-btn">Buy Now</a>
       </div>
     </div>
   </div>
 </section>
 
-<section id="features">
+<!-- HOW TO ORDER -->
+<section id="steps">
   <div class="section-title">
-    <h2>Why Fusion Crest?</h2>
-    <p>Quality you can feel, service you can trust</p>
+    <h2>How to Order</h2>
   </div>
-  <div class="features">
-    <div class="feature">
-      <div>👕</div>
-      <h4>Premium Cotton</h4>
-      <p>200GSM bio-washed cotton for ultimate comfort and durability</p>
+  <div class="steps-grid">
+    <div class="step-card" data-step="1">
+      <h3>Choose Product</h3>
+      <p>Browse our collection and select your favorite design</p>
     </div>
-    <div class="feature">
-      <div>🖨️</div>
-      <h4>HD Long-Lasting Prints</h4>
-      <p>DTG printing technology ensures vibrant colors that never fade</p>
+    <div class="step-card" data-step="2">
+      <h3>WhatsApp Order</h3>
+      <p>Message us your selection via WhatsApp</p>
     </div>
-    <div class="feature">
-      <div>⚡</div>
-      <h4>No Minimum Order</h4>
-      <p>Order 1 or 100 - same premium quality, same fast delivery</p>
+    <div class="step-card" data-step="3">
+      <h3>Confirm Details</h3>
+      <p>We confirm your order, size and delivery details</p>
     </div>
-    <div class="feature">
-      <div>📱</div>
-      <h4>WhatsApp Ordering</h4>
-      <p>Simple 1-minute ordering. Real-time tracking & support</p>
+    <div class="step-card" data-step="4">
+      <h3>Fast Delivery</h3>
+      <p>Get your premium apparel delivered quickly</p>
     </div>
   </div>
 </section>
 
-<section id="order" class="order-section">
-  <div class="order-img">
-    <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?q=80&w=800" alt="Custom T-Shirt Order">
+<!-- ORDER -->
+<section id="order">
+  <div class="section-title">
+    <h2>Order via WhatsApp</h2>
   </div>
-  <div class="order-form">
-    <h2>Order Your Custom T-Shirt</h2>
-    <p style="color:var(--text-muted);margin-bottom:2rem;">Fastest way to order - directly via WhatsApp</p>
-    <input id="name" type="text" placeholder="Your Full Name *" required>
-    <input id="phone" type="tel" placeholder="Your Phone Number *" required>
-    <input id="size" placeholder="Size (S / M / L / XL / XXL) *" required>
-    <input id="qty" type="number" min="1" placeholder="Quantity *" required>
-    <textarea id="note" placeholder="Design preference, custom print text, or special notes"></textarea>
-    <button onclick="sendWhatsApp();closeMobileMenu()">💬 Order via WhatsApp</button>
-    <p style="font-size:0.9rem;color:var(--text-muted);margin-top:1rem;">
-      🚚 Delivery: 2-3 days in Sholapur | ✅ COD Available
-    </p>
+  <div class="order-container">
+    <div class="form-group">
+      <label for="name">Your Name</label>
+      <input id="name" type="text" placeholder="Enter your full name" required>
+    </div>
+    <div class="form-group">
+      <label for="phone">Phone Number</label>
+      <input id="phone" type="tel" placeholder="+91 9xxxxxxxxx" required>
+    </div>
+    <div class="form-group">
+      <label for="size">Size</label>
+      <input id="size" type="text" placeholder="S / M / L / XL / XXL" required>
+    </div>
+    <div class="form-group">
+      <label for="note">Design/Notes</label>
+      <textarea id="note" rows="4" placeholder="Specific design preference or special notes"></textarea>
+    </div>
+    <button class="order-btn" onclick="sendWhatsApp()">Send Order to WhatsApp</button>
   </div>
 </section>
 
-<footer id="contact">
+<!-- FAQ -->
+<section id="faq" class="faq-section">
+  <div class="section-title">
+    <h2>Frequently Asked Questions</h2>
+  </div>
+  <div class="faq-container">
+    <div class="faq-item">
+      <button class="faq-question">What sizes do you offer?</button>
+      <div class="faq-answer">
+        <p>We offer S, M, L, XL, and XXL sizes. Please check our size chart or WhatsApp us for specific measurements.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What is the price of all products?</button>
+      <div class="faq-answer">
+        <p>All our premium printed apparel is priced at just ₹400 regardless of design or product type.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">How long does delivery take?</button>
+      <div class="faq-answer">
+        <p>Delivery typically takes 3-7 days across India depending on your location. We provide tracking information.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What payment methods do you accept?</button>
+      <div class="faq-answer">
+        <p>We accept UPI, Google Pay, PhonePe, and bank transfer. Full payment is required before dispatch.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">Can I customize my design?</button>
+      <div class="faq-answer">
+        <p>Yes! Share your design ideas in the notes section or WhatsApp us. Custom designs are same price ₹400.</p>
+      </div>
+    </div>
+    <div class="faq-item">
+      <button class="faq-question">What is your return policy?</button>
+      <div class="faq-answer">
+        <p>We accept returns within 7 days for unused items. Contact us via WhatsApp for return process.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ENHANCED FOOTER -->
+<footer class="site-footer">
   <div class="footer-content">
-    <div class="footer-section">
-      <h4>Fusion Crest</h4>
-      <p>Premium custom t-shirts with fast local delivery.</p>
-      <p>📍 Tasgaon Road, Sholapur, Maharashtra</p>
+    <div class="footer-brand">
+      <h3>Fusion Crest</h3>
+      <p>Premium printed apparel with bold designs</p>
+      <div class="social-links">
+        <a href="#" class="social-link" title="WhatsApp">📱</a>
+        <a href="#" class="social-link" title="Instagram">📸</a>
+        <a href="#" class="social-link" title="Facebook">📘</a>
+      </div>
     </div>
-    <div class="footer-section">
-      <h4>Quick Links</h4>
-      <a href="#products" onclick="closeMobileMenu()">Products</a><br>
-      <a href="#features" onclick="closeMobileMenu()">Why Us</a><br>
-      <a href="#order" onclick="closeMobileMenu()">Order Now</a>
+    <div class="footer-contact">
+      <h4>Let's Connect</h4>
+      <p><span class="contact-highlight">+91 9356990219</span></p>
+      <p>📍 India Wide Delivery</p>
+      <p>⚡ Same Day Dispatch</p>
     </div>
-    <div class="footer-section">
-      <h4>Contact</h4>
-      <p>📞 <a href="tel:+919356990219">9356990219</a></p>
-      <p>🕒 Order before 8PM for next day processing</p>
-    </div>
-  </div>
-  <div class="social-links">
-    <a href="https://wa.me/919356990219" target="_blank" class="social-link whatsapp-logo-small">📱</a>
-    <a href="https://www.instagram.com/fusioncrest" target="_blank" class="social-link">📸</a>
   </div>
   <div class="footer-bottom">
-    <p>&copy; 2026 Fusion Crest. All rights reserved. | Made with ❤️ in Sholapur</p>
+    © 2026 Fusion Crest – Revrie Prints. All rights reserved.
   </div>
 </footer>
 
-<!-- FIXED WHATSAPP FLOATING BUTTON -->
-<a href="https://wa.me/919356990219" target="_blank" class="whatsapp-logo" title="Order via WhatsApp">
-</a>
-
 <script>
-let menuOpen = false;
-
-function toggleMobileMenu() {
-  const nav = document.getElementById('mobileNav');
-  const menu = document.getElementById('menuToggle');
+function sendWhatsApp() {
+  const name = document.getElementById('name').value;
+  const phone = document.getElementById('phone').value;
+  const size = document.getElementById('size').value;
+  const note = document.getElementById('note').value;
   
-  menuOpen = !menuOpen;
-  if (menuOpen) {
-    nav.classList.add('open');
-    menu.classList.add('active');
-    document.body.style.overflow = 'hidden';
-  } else {
-    nav.classList.remove('open');
-    menu.classList.remove('active');
-    document.body.style.overflow = '';
-  }
-}
-
-function closeMobileMenu() {
-  if (menuOpen) {
-    toggleMobileMenu();
-  }
-}
-
-document.addEventListener('keydown', (e) => {
-  if (e.key === 'Escape' && menuOpen) {
-    closeMobileMenu();
-  }
-});
-
-document.addEventListener('click', (e) => {
-  const nav = document.getElementById('mobileNav');
-  const menu = document.getElementById('menuToggle');
-  if (menuOpen && !nav.contains(e.target) && !menu.contains(e.target)) {
-    closeMobileMenu();
-  }
-});
-
-function sendWhatsApp(){
-  const name=document.getElementById('name').value;
-  const phone=document.getElementById('phone').value;
-  const size=document.getElementById('size').value;
-  const qty=document.getElementById('qty').value;
-  const note=document.getElementById('note').value;
+  const message = `🆕 *New Order* %0A%0A👤 *Name:* ${name}%0A📱 *Phone:* ${phone}%0A📏 *Size:* ${size}%0A💬 *Notes:* ${note || 'None'}`;
   
-  const msg=`🆕 *New T-Shirt Order* 🆕
-
-👤 *Name:* ${name}
-📱 *Phone:* ${phone}
-📏 *Size:* ${size}
-🔢 *Quantity:* ${qty}
-📝 *Notes:* ${note || 'None'}
-
-*Fusion Crest - Sholapur*`;
-  
-  window.open(`https://wa.me/919356990219?text=${encodeURIComponent(msg)}`);
+  const whatsappUrl = `https://wa.me/919356990219?text=${encodeURIComponent(message)}`;
+  window.open(whatsappUrl, '_blank');
 }
 
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-  anchor.addEventListener('click', function(e) {
+  anchor.addEventListener('click', function (e) {
     e.preventDefault();
-    closeMobileMenu();
-    document.querySelector(this.getAttribute('href')).scrollIntoView({ 
-      behavior: 'smooth' 
-    });
+    const target = document.querySelector(this.getAttribute('href'));
+    if (target) {
+      target.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start'
+      });
+    }
   });
 });
 
-window.addEventListener('scroll', () => {
-  const header = document.querySelector('header');
-  if (window.scrollY > 100) {
-    header.style.background = 'rgba(14,14,14,0.98)';
-  } else {
-    header.style.background = 'rgba(14,14,14,0.95)';
-  }
+document.querySelectorAll('.faq-question').forEach(question => {
+  question.addEventListener('click', function() {
+    const answer = this.nextElementSibling;
+    const isActive = this.classList.contains('active');
+    
+    document.querySelectorAll('.faq-question').forEach(q => {
+      q.classList.remove('active');
+      q.nextElementSibling.classList.remove('active');
+    });
+    
+    if (!isActive) {
+      this.classList.add('active');
+      answer.classList.add('active');
+    }
+  });
 });
 </script>
+
 </body>
 </html>
